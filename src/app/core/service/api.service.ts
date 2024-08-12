@@ -16,18 +16,21 @@ export class ApiService {
   
   constructor(private http:HttpClient) { }
   
-  private formatError(error:any)
+  private formatErrors(error:any)
   {
     return throwError(() => new Error(error))
   }
 
   get(path:string, params:HttpParams = new HttpParams()) : Observable<any>{
-    return this.http.get(path,{params}).pipe(catchError(this.formatError));
+    return this.http.get(path,{params}).pipe(catchError(this.formatErrors));
   }
   put(path:string, body:Object ={}):Observable<any>{
     return this.http.put(path,JSON.stringify(body), this.httpOptions).pipe(catchError(this.formatErrors))
   }
   post(path:string, body:Object ={}):Observable<any>{
     return this.http.post(path,JSON.stringify(body), this.httpOptions).pipe(catchError(this.formatErrors))
+  }
+  delete(path:string):Observable<any>{
+    return this.http.delete(path).pipe(catchError(this.formatErrors))
   }
 }
