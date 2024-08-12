@@ -27,4 +27,7 @@ export class ApiService {
   put(path:string, body:Object ={}):Observable<any>{
     return this.http.put(path,JSON.stringify(body), this.httpOptions).pipe(catchError(this.formatErrors))
   }
+  post(path:string, body:Object ={}):Observable<any>{
+    return this.http.post(path,JSON.stringify(body), this.httpOptions).pipe(catchError(this.formatErrors))
+  }
 }
