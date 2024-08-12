@@ -1,17 +1,17 @@
 {
     "user": [
       {
-        "name": "Ashish Mishra",
-        "mobNumber": "1234567891",
-        "age": 29,
-        "dob": "1995-05-12",
+        "name": "Ahmed Abd Elsalam",
+        "mobNumber": "01113046200",
+        "age": 23,
+        "dob": "2000-09-26",
         "email": "admin@gmail.com",
         "password": "123456",
         "address": {
-          "addLine1": "District Center",
-          "addLine2": "Janakpuri",
-          "city": "New Delhi",
-          "state": "Delhi",
+          "addLine1": "Egypt",
+          "addLine2": "Cairo",
+          "city": "Nasr City",
+          "state": "Giza",
           "zipCode": "110052"
         },
         "language": [
